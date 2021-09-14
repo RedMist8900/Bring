@@ -38,22 +38,18 @@
             </div>
 
             <!-- Drop Down Menu -->
-            <div class="dropDownMenu">
-                <button onclick="myFunction()" class="dropbtn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="black">
-                    <path d="M0 0h24v24H0z" fill="none"/>
-                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
-                    </svg>
-                </button>
-                <nav class="dropDownContent" id="myDropDown">
-                    <img src="/img/baseline-keyboard-arrow-right.svg" alt="Arrow Pointing Right"/><a href="#">Forsiden</a>
-                    <img src="/img/baseline-keyboard-arrow-right.svg" alt="Arrow Pointing Right"/><a href="#">Tjenester</a>
-                    <img src="/img/baseline-keyboard-arrow-right.svg" alt="Arrow Pointing Right"/><a href="#">Om Bring</a>
-                    <img src="/img/baseline-keyboard-arrow-right.svg" alt="Arrow Pointing Right"/><a href="#">E-handel</a>
-                    <img src="/img/baseline-keyboard-arrow-right.svg" alt="Arrow Pointing Right"/><a href="#">Modtagerservice</a>
-                    <img src="/img/baseline-keyboard-arrow-right.svg" alt="Arrow Pointing Right"/><a href="#">Kundeservice</a>
-                    <img src="/img/baseline-keyboard-arrow-right.svg" alt="Arrow Pointing Right"/><a href="#">Ledige jobs</a>
-                    <img src="/img/baseline-keyboard-arrow-right.svg" alt="Arrow Pointing Right"/><a href="#">Kontakt os</a>
+            <div class="header-nav">
+                <input type="checkbox" id="sub-nav">
+                    <label for="sub-nav" class="sub-nav-toggle"><span></span></label>
+                <nav id="sub-navigation">
+                    <a href="#" class="nav-item">Forsiden</a>
+                    <a href="#" class="nav-item">Tjenester</a>
+                    <a href="#" class="nav-item">Om Bring</a>
+                    <a href="#" class="nav-item">E-handel</a>
+                    <a href="#" class="nav-item">Modtagerservice</a>
+                    <a href="#" class="nav-item">Kundeservice</a>
+                    <a href="#" class="nav-item">Ledige jobs</a>
+                    <a href="#" class="nav-item">Kontakt os</a>
                 </nav>
             </div>
         </header>
@@ -63,22 +59,5 @@
             
         </section>
     </div>
-    <script>
-        /* When the user clicks on the button, 
-        toggle between hiding and showing the dropdown content */
-        function myFunction() {
-          document.getElementById("myDropdown").classList.toggle("show");
-        }
-        
-        // Close the dropdown if the user clicks outside of it
-        window.onclick = function(e) {
-          if (!e.target.matches('.dropbtn')) {
-          var myDropdown = document.getElementById("myDropdown");
-            if (myDropdown.classList.contains('show')) {
-              myDropdown.classList.remove('show');
-            }
-          }
-        }
-    </script>
 </body>
 </html>
