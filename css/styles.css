@@ -57,6 +57,7 @@ table {
 /* */
 body {
     margin: 0;
+	min-height: 1080px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -68,84 +69,77 @@ header {
 	align-items: center;
 }
 
-/* Drop Down */
-.navbar {
-	overflow: hidden;
-	background-color: #333;
-	font-family: Arial, Helvetica, sans-serif;
-  }
-  
-.navbar a {
-	float: left;
-	font-size: 16px;
-	color: white;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
+/* Essential Styles */
+#sub-nav {
+  position: absolute;
+  top: -100px;
 }
 
-.dropDownMenu {
-	float: left;
-	overflow: hidden;
+#sub-navigation {
+  display: none;
 }
 
-.dropDownMenu .dropbtn {
-	cursor: pointer;
-	font-size: 16px;  
-	border: none;
-	outline: none;
-	color: white;
-	padding: 14px 16px;
-	background-color: inherit;
-	font-family: inherit;
-	margin: 0;
+#sub-nav:checked ~ #sub-navigation {
+  display: block;
+  /* transform: translateY(100%); */
 }
 
-.dropDownContent {
-	display: none;
-	position: absolute;
-	background-color: #f9f9f9;
-	min-width: 160px;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	z-index: 1;
+.sub-nav-toggle span:after {
+  content: "\2630";
 }
 
-.dropDownContent a {
-	float: none;
-	color: black;
-	padding: 12px 16px;
-	text-decoration: none;
-	display: block;
-	text-align: left;
+/* Aesthetic styles */
+body {
+  line-height: 14px;
+  -webkit-font-smoothing: antialiased;
+  padding: 0;
+  margin: 0;
 }
 
-.dropDownContent a:hover {
-	background-color: #ddd;
-}
-  
-.show {
-	display: block;
-}
-
-/* .dropDownMenu {
-	position: relative;
-	display: inline-block;
+.sub-nav-toggle {
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  min-width: 48px;
+  text-align: center;
 }
 
-.dropDownContent {
-	display: flex;
-	position: absolute;
-	flex-direction: column;
-	background-color: #f9f9f9;
-	min-width: 160px;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	padding: 12px 16px;
-	z-index: 1;
-  }
-  
-  .dropDownMenu .dropDownContent {
-	display: block;
-  } */
+.sub-nav-toggle, .nav-item {
+  padding: 14px 16px;
+  display: inline-block;
+  /* float: left; */
+  color: black;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+#sub-nav:checked label {
+  background: darken(teal, 5%);
+}
+
+.header-nav {
+  max-width: 25%;
+  transform: translateY(50%);
+  position: sticky;
+}
+
+#sub-navigation {
+  clear: both;
+}
+
+.nav-item {
+    display: block;
+	background-color: white;
+    width: 80%;
+    text-align: center;
+}
+
+.nav-item::before {
+	content: url("/img/baseline-keyboard-arrow-right.svg");
+}
 
 /* Body */
 
@@ -154,6 +148,5 @@ header {
 	background-image: url("../img/hero-02.jpg");
 	background-position: center;
 	background-size: cover;
-	width: 1024px;
-	height: auto;
+	height: 1000px;
 }
